@@ -1,11 +1,18 @@
+import shortid from 'shortid';
+
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  console.log(options);
   const buttonNames = Object.keys(options);
-  console.log(buttonNames);
   return (
     <div>
       {buttonNames.map(button => (
-        <button>{button}</button>
+        <button
+          key={shortid.generate()}
+          name={button}
+          onClick={onLeaveFeedback}
+          type="button"
+        >
+          {button}
+        </button>
       ))}
     </div>
   );
