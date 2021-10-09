@@ -1,9 +1,9 @@
-// import './App.css';
+import './App.css';
 import Feedback from './components/Feedback/Feedback';
 
 function App() {
   return (
-    <section>
+    <section className="container">
       <Feedback />
     </section>
   );

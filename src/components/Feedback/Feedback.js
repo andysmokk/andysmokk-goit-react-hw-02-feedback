@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import s from './Feedback.module.css';
 import Section from '../Section/Section';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Statistics from '../Statistics/Statistics';
@@ -26,15 +27,15 @@ class Feedback extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
     const {
       state,
       onLeaveFeedback,
       countTotalFeedback,
       countPositiveFeedbackPercentage,
     } = this;
+    const { good, neutral, bad } = state;
     return (
-      <div>
+      <div className={s.box}>
         <Section title="Please leave feedback">
           <FeedbackOptions options={state} onLeaveFeedback={onLeaveFeedback} />
         </Section>
